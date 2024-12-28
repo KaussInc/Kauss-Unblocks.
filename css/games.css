@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'Milkyway';
+  src: url('../junk/fonts/milkyway.ttf') format('truetype');}
+body {
+  font-family: 'Milkyway', cursive;
+  margin: 0;
+  padding: 0;
+  background: #fef6e4;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  flex-direction: column;}
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffa6ea;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 1000;}
+.navbar-button {
+  color: #000000;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.3s;}
+.navbar-button:hover {
+  color: #ff00da;
+  transform: scale(1.1);}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 1200px;}
+.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.5s forwards;}
+@keyframes fadeIn {
+  to {opacity: 1;transform: translateY(0);}}
+.button:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);}
+.btn {
+  text-decoration: none;
+  color: #cc3d3d;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffcad4;
+  border-radius: 25px;
+  padding: 15px 20px;
+  box-shadow: 0 4px 8px rgba(255, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;}
+.btn:hover {
+  background-color: #ff6f91;
+  transform: scale(1.05);}
+.btn img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: transform 0.3s;}
+.btn img:hover {
+  transform: scale(1.1);}
+.btn h2 {
+  margin: 0;
+  font-size: 1.4em;
+  color: #6e39ff;
+  transition: color 0.3s;}
+.btn:hover h2 {
+  color: #000000;}
+@media (max-width: 768px) {
+  .btn img {
+    width: 120px;
+    height: 120px;}}
+@media (max-width: 480px) {
+  .btn img {
+    width: 100px;
+    height: 100px;}}
